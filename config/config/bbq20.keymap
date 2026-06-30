@@ -1,0 +1,34 @@
+&keymap {
+    default_layer {
+        bindings =
+            <&kp EXCL>  <&kp AT>   <&kp HASH>  <&kp DLLR>  <&kp PRCNT> <&kp CRRT>  <&kp AMPS>  <&kp STAR>  <&kp LPAR> <&kp RPAR>
+            <&kp TILDE> <&kp PLUS> <&kp MINUS> <&kp UNDER> <&kp EQUAL><&kp LBKT>  <&kp RBKT>  <&kp SCLN>  <&kp QUOT> <&kp RET>
+            <&kp LSHFT> <&kp SYM> <&kp SPACE> <&kp LALT> <&kp LGUI> <&bt BT_SEL 0> <&bt BT_SEL 1> <&bt BT_SEL 2> <&bt BT_CLR>;
+    };
+
+    nav_layer {
+        bindings =
+            <&kp HOME>  <&kp PG_UP> <&kp UP>    <&kp PG_DN> <&kp END>   <&kp F1>   <&kp F2>   <&kp F3>   <&kp F4>   <&kp DEL>
+            <&kp LEFT>  <&kp DOWN>  <&kp RGHT>  <&trans>    <&trans>   <&kp F5>   <&kp F6>   <&kp F7>   <&kp F8>   <&kp INS>
+            <&trans>    <&trans>    <&trans>    <&trans>    <&trans>   <&kp F9>   <&kp F10>  <&kp F11>  <&kp F12>  <&kp RET>
+            <&kp LSHFT> <&kp SYM> <&kp SPACE> <&kp LALT> <&kp LGUI> <&bt BT_SEL 0> <&bt BT_SEL 1> <&bt BT_SEL 2> <&bt BT_CLR>;
+    };
+
+    fn_layer {
+        bindings =
+            <&bl BL_TOG> <&ext_power EP_TOG> <&out OUT_TOG> <&trans>  <&trans>  <&trans>  <&trans>  <&trans>  <&trans>  <&trans>
+            <&bt BT_SEL 0> <&bt BT_SEL 1> <&bt BT_SEL 2> <&bt BT_SEL 3> <&bt BT_CLR> <&trans> <&trans> <&trans> <&trans> <&trans>
+            <&trans>  <&trans>  <&trans>  <&trans>  <&trans>  <&trans>  <&trans>  <&trans>  <&trans>  <&kp RET>
+            <&kp LSHFT> <&kp SYM> <&kp SPACE> <&kp LALT> <&kp LGUI> <&bt BT_SEL 0> <&bt BT_SEL 1> <&bt BT_SEL 2> <&bt BT_CLR>;
+    };
+};
+
+behaviors {
+    mkp: macro_press {
+        compatible = "zmk,behavior-macro-press";
+        label = "MACRO_PRESS";
+        #binding-cells = <0>;
+        bindings = <&kp LCTRL>;
+    };
+};
+
